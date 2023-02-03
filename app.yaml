@@ -1,0 +1,6 @@
+runtime: ruby30
+
+entrypoint: bundle exec puma -C ./puma.rb
+
+instance_class: F2
+
