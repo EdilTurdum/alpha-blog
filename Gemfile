@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-#ruby "3.1.3"
+ruby "3.1.3"
 #Changing the above ruby version to below, vcz GCP throws an error.
 
 
@@ -71,7 +71,7 @@ end
 
 group :production do
   gem 'pg'
-  ruby '~> 3.0.0'
+  ruby '~> 3.1.3'
 end
 
 group :test do
