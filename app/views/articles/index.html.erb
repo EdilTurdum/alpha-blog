@@ -11,7 +11,7 @@
         <% @articles.each do |article| %>
         <tr>
             <td><%= article.title%></td>
-            <td><%= article.description%></td>
+            <td><%= article.description[0,20]+"..."%></td>
             <td>Placeholder for actions</td>
         </tr>
         <% end %>
