@@ -11,9 +11,13 @@
         <% @articles.each do |article| %>
         <tr>
             <td><%= article.title%></td>
-            <td><%= article.description[0,20]+"..."%></td>
-            <td>Placeholder for actions</td>
+            <td><%= article.description[0,20]+"..."%></td>+
+            <td><%= link_to 'Show', article_path(article) %></td>
+            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete } %></td>
         </tr>
         <% end %>
     </tbody>
 </table>
+
+<%= link_to "Create New Article", new_article_path %>
